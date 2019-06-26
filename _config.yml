@@ -1,0 +1,38 @@
+title: TiTLE
+tagline: tagline
+description: description here
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://beehome.org # the base hostname & protocol for your site
+
+author:
+  name: yourname
+  email: youremail
+  github: githubhere
+  twitter: ttee
+  weibo: weiboma
+
+permalink: /:year/:month/:day/:title
+timezone: Asia/Shanghai
+
+tags_path: /tags.html
+feed_path: /feed.xml
+
+markdown: kramdown
+# highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+service:
+  comment: disqus
+  disqus:
+    short_name: evercoding
+  duoshuo: 
+    short_name: evercoding
+  google:
+    tracking_id : 
+  baidu:
+    num: 
+
+exclude: [README.md, CNAME]
+  

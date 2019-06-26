@@ -1,0 +1,6 @@
+{% case site.service.comment %}
+{% when 'duoshuo' %}
+  {% include component/duoshuo %}
+{% when 'disqus' %}
+  {% include component/disqus %}
+{% endcase %}

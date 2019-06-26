@@ -1,0 +1,17 @@
+---
+layout: page
+title: Links
+tagline: ""
+links:
+  - url: http://delnabla.github.io/
+    name: F's Blog
+  - url: http://dee.github.com
+    name: Sound Of Wind
+    title: popol的个人博客
+---
+
+<ul class="links">
+{% assign links = page.links %}
+{% include component/links %}
+{% assign links = nil %}
+</ul>
