@@ -6,6 +6,7 @@ description: "None"
 tags: ["ROS_LIKELY", "ROS_UNLIKELY", "likely", "unlikely"]
 ---
 
+
 Linux内核中的linkely与unlikely:
 --------------------------------
 ```
@@ -17,7 +18,9 @@ if(likely(value))    //等价于 if(value) 但执行if分支可能性大(value�
 if(unlikely(value))  //也等价于 if(value) 但执行else分支可能性大(value为假可能性大)
 ```
 
+
 ROS里的宏:
+---------
 ```
 #ifdef WIN32
 #define ROS_LIKELY(x)       (x)
@@ -27,14 +30,13 @@ ROS里的宏:
 #define ROS_UNLIKELY(x)     __builtin_expect((x),0)
 #endif
 ```
-__builtin_expect
----------------------
-是 GCC (version >= 2.96）提供给程序员使用的，目的是将“分支转移”的信息提供给编译器，这样编译器可以对代码进行优化，以减少指令跳转带来的性能下降。  
+`__builtin_expect`是 GCC (version >= 2.96）提供给程序员使用的，目的是将“分支转移”的信息提供给编译器，这样编译器可以对代码进行优化，以减少指令跳转带来的性能下降。  
 `__builtin_expect((x),1)`表示 x 的值为真的可能性更大；  
 `__builtin_expect((x),0)`表示 x 的值为假的可能性更大。
 
+
 ROS code sample:
----------------------
+----------------
 ```
 #define ROSCONSOLE_AUTOINIT \
    do \
