@@ -1,3 +1,11 @@
+---
+layout: post
+title: "P NP NPC NP-hard 问题"
+tagline: "P"
+description: "None"
+tags: ["P", "NP"]
+---
+
 P NP NPC NP-hard 问题
 =====================
 
