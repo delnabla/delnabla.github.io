@@ -6,9 +6,6 @@ description: "None"
 tags: ["P", "NP"]
 ---
 
-P NP NPC NP-hard 问题
-=====================
-
 P问题:
 -----
 能够在多项式时间内解决的决策问题.
